@@ -1,0 +1,83 @@
+<!-- <div> {{oddNumber}} </div> -->
+
+
+
+
+<!-- <div>
+  <div>{{items.nam}}</div>
+  <strong *ngIf="items.typ === 'bold' "
+    [ngStyle]="{backgroundColor:items.typ === 'bold' ? 'blue' : 'red' }">{{items.conten}}</strong>
+  <em *ngIf="items.typ !== 'bold' "
+    [ngStyle]="{backgroundColor:items.typ !== 'bold' ? 'red' : 'blue' }">{{items.conten}}</em>
+</div> -->
+
+<!-- <div>{{ iWillPickAname1 }}</div> -->
+
+
+<!--  -->
+
+<!-- <div class="row">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <h5>{{ account.name }}</h5>
+    <hr>
+    <p>this account is {{ account.status }}</p>
+    <button class="btn btn-default" (click)="onsetTo('active')">set to 'active'</button>
+    <button class="btn btn-default" (click)="onsetTo('inactive')">set to 'inactive'</button>
+    <button class="btn btn-default" (click)="onsetTo('unknown')">set to 'unknown'</button>
+  </div>
+</div> -->
+
+
+
+
+
+
+<!-- <div  class="row">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <h5>{{ account.name }}</h5>
+    <hr>
+    <p>this account is {{ account.status }}</p>
+    <button class="btn btn-default" (click)="onsetTo('active')">set to 'active'</button>
+    <button class="btn btn-default" (click)="onsetTo('inactive')">set to 'inactive'</button>
+    <button class="btn btn-default" (click)="onsetTo('unknown')">set to 'unknown'</button>
+  </div>
+</div> -->
+
+<!-- <div class="row">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <h5> {{newAccount.name}} </h5>
+    <hr>
+    <p>this account is {{newAccount.status}}</p>
+    <button class="btn btn-default" (click)="onsetTo('active')">set to 'active'</button>
+    <button class="btn btn-default" (click)="onsetTo('inactive')">set to 'inactive'</button>
+    <button class="btn btn-default" (click)="onsetTo('unknown')">set to 'unknown'</button>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <h5> newAccount.name </h5>
+    <hr>
+    <p>this account is status</p>
+    <button class="btn btn-default" (click)="GoBack()">Go to previous page</button>
+    <button class="btn btn-default">set to 'inactive'</button>
+    <button class="btn btn-default">set to 'unknown'</button>
+    <div>{{ toOdd }}</div>
+  </div>
+</div>
+<div class="container">
+  <a [routerLink]="['/odd',1,'ali']" [queryParams]="{'allow-edit':'1'}">first link</a>
+  <a [routerLink]="['/odd',2, 'ahmed']">seconed link</a>
+  <p>user id is {{ id }}</p>
+  <p>user name is {{ name }}</p>
+  <button (click)="GoBack()">go bacj</button>
+  <router-outlet></router-outlet>
+
+</div>

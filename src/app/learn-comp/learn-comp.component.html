@@ -1,0 +1,29 @@
+<div>see what is below</div>
+<div class="table-responsive">
+  <table>
+    <thead>
+      <tr>
+        <td>name</td>
+        <td>age</td>
+        <td>title</td>
+      </tr>
+    </thead>
+    <div *ngFor="let x of products">
+      <tbody>
+        <tr>
+          <td>{{ x.name }}</td>
+          <td>{{ x.age }}</td>
+          <td>{{ x.title }}</td>
+        </tr>
+      </tbody>
+    </div>
+  </table>
+</div>
+
+<input type="text" (keyup)="x(data.value)" #data>
+<app-footer [receivedFromParent]="dataFromParent" (DataSentFromChild)="dataReceivedFromParent = $event">
+  <div class="div1">hello from footer</div>
+  <div class="div2">hello from the seconed footer</div>
+  <span>this is the footer span</span>
+</app-footer>
+dataReceivedFromParent

@@ -1,0 +1,871 @@
+<!-- Start of first project (project one) -->
+
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <input type="text" [(ngModel)]="name">
+      <p>{{ name }}</p>
+      <h3>i'm in the AppComponent!</h3>
+      <app-servers></app-servers>
+      <app-server></app-server>
+      <hr>
+      <hr>
+      <app-ass2></app-ass2>
+      <app-a-ss3></app-a-ss3>
+    </div>
+  </div>
+</div> -->
+
+<!-- click on the button to add a server and click on the created
+server to remove it training -->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onAddServers()">Add Server</button>
+      <br><br>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let server of servers; let i = index" (click)="onRemoveServer(i)">{{ server
+          }}</li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- Start of first project (project one) -->
+
+<!-- <app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+<!-- blue print And newServer cockpit -->
+
+<!-- <div class="container">
+  <div class="col-xs-12">
+    <app-cockpit (anyNameCreated)="onServerAdded($event)" (anyName2Created)="onBluePrintAdded($event)"></app-cockpit>
+
+
+  </div>
+  <div class="col-xs-12">
+    <button class="btn btn-primary" (click)="onChangeFirst()">change first element</button>
+    <button class="btn btn-danger" (click)="onDestroyFirst()">destroy first component</button>
+    <app-server-element *ngFor="let element of box" [srvElement]="element" [name]="element.name">
+      <p #contentParagraph>
+        <strong *ngIf="element.type=== 'server' " style="color: red;"> {{element.content}}</strong>
+        <em *ngIf="element.type === 'blueprint' "> {{element.content}} </em>
+      </p>
+    </app-server-element>
+  </div>
+</div> -->
+
+<!-- assignment THREE I Guess -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (numIncrement)="receive($event)"></app-game-control>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-even *ngFor="let even of EvenBox" [evenNumber]="even"></app-even>
+      <app-odd *ngFor="let odd of oddBox" [oddNumber]="odd"> </app-odd>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- start of project training -->
+
+
+<!-- <app-thead (checkTheType)="receiveTheType($event)"></app-thead>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-tfirst-page *ngIf="theType === 'recipe' "></app-tfirst-page>
+      <app-t-seconed-page (AddFruitHasBeenClicked)="receivedFruit($event)"
+        *ngIf="theType === 'shoppingList'"></app-t-seconed-page>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- recap on ngif & ngfor -->
+<!--even and odd-->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onlyOdd = !onlyOdd">only show odd numbers</button>
+      <br><br>
+      <ul class="list-group">
+        <div *ngIf="onlyOdd">
+          <li class="list-group-item" *ngFor="let odd of oddNumbers" [ngClass]="{odd: odd % 2 !== 0}"
+            [ngStyle]="{backgroundColor: odd % 2 !== 0 ? 'yellow' : 'transparent' }">
+            {{odd}}
+          </li>
+        </div>
+        <div *appUnless="onlyOdd">
+          <li class="list-group-item" *ngFor="let even of evenNumbers" [ngClass]="{odd: even % 2 !== 0}"
+            [ngStyle]="{backgroundColor: even % 2 !== 0 ? 'yellow' : 'transparent' }">
+            {{even}}
+          </li>
+        </div>
+
+      </ul>
+      <p appBasicHighLight>style me with basic directive!</p>
+      <p appBetterHighlight defaultColor="orange" [HighlightColor]="'violet'">style me with better directive!</p>
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">value is 5</p>
+        <p *ngSwitchCase="10">value is 10</p>
+        <p *ngSwitchCase="100">value is 100</p>
+        <p *ngSwitchDefault>value is Default</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- training  even and odd-->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button (click)="ShowTheEven = !ShowTheEven" class="btn btn-primary">only show even numbers</button>
+      <br><br>
+      <ul class="list-group">
+        <div *appDirectiveTraining="ShowTheEven === true">
+          <div *ngFor="let even of nums">
+            <li [ngStyle]="{backgroundColor: even % 2 === 0 ? 'red' : 'blue'}" *ngIf="even % 2 === 0"
+              class="list-group-item">{{ even }}</li>
+          </div>
+        </div>
+        <div *ngIf="ShowTheEven === false">
+          <div *ngFor="let odd of nums">
+            <li [ngClass]="{hello: odd % 2 == 0}" *ngIf="odd % 2 !== 0" class="list-group-item">{{ odd }}</li>
+          </div>
+        </div>
+      </ul>
+      <p>style me with basic directive!</p>
+      <div [ngSwitch]="val">
+        <p *ngSwitchCase="5">the switch has chosen the val to be 5</p>
+        <p *ngSwitchCase="10">the switch has chosen the val to be 10</p>
+        <p *ngSwitchCase="100">value is 100</p>
+        <p *ngSwitchDefaul>value is Default</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- training that i will delete after i finish -->
+
+
+
+
+
+
+
+
+<!-- account project -->
+<!-- <div class="container"> -->
+<!-- <div class="row"> -->
+<!-- <div class="col-xs-12 col-md-8 col-md-offset-2"> -->
+<!-- <app-new-account></app-new-account> -->
+<!-- <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account> // -->
+<!-- <hr> -->
+<!-- <app-account *ngFor="let acc of accounts;let i = index" [account]="acc" [id]="i"></app-account> -->
+<!-- <app-account *ngFor="let acc of accounts;let i = index" [account]="acc" [id]="i"
+        (statusChanged)="onstatusChange($event)"></app-account> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <app-new-account></app-new-account>
+      <hr>
+      <app-account *ngFor="let acc of accounts;let i = index" [account]="acc" [id]="i"></app-account>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <div class="row">
+
+    <app-even (MyItems1)="BoldAdd($event)" (MyItems2)="ItallicAdd($event)"></app-even>
+
+  </div>
+  <br>
+  <div class="row">
+
+    <app-odd *ngFor="let piece of boxx" [items]="piece"></app-odd>
+    <p>Has the above shown</p>
+  </div>
+</div> -->
+
+
+
+
+<!-- Training account project -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <app-even (accountAdded)="onAccountAdded($event)"></app-even>
+      <hr>
+      <app-odd *ngFor="let acc of accounts;let i = index" [account]="acc" [id]="i"
+        (statusChanged)="onstatusChange($event)"></app-odd>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <app-even></app-even>
+      <hr>
+      <app-odd></app-odd>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <div class="form-group">
+            <label>account name</label>
+            <input type="text" class="form-control" #accountName>
+          </div>
+          <div class="form-group">
+            <select class="form-group" #status>
+              <option value="active">Active</option>
+              <option value="inactive">inActive</option>
+              <option value="Hidden">Hidden</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" (click)="onCreateAccount(accountName.value, status.value)">Add
+            account</button>
+        </div>
+      </div>
+      <hr>
+      <div *ngFor="let account of accounts" class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <h5>{{ account.name }}</h5>
+          <hr>
+          <p>this account is {{ account.status }}</p>
+          <button class="btn btn-default" (click)="onsetTo('active')">set to 'active'</button>
+          <button class="btn btn-default" (click)="onsetTo('inactive')">set to 'inactive'</button>
+          <button class="btn btn-default" (click)="onsetTo('unknown')">set to 'unknown'</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<!-- assignmnent 4 -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md- col-md-offset-2">
+      <app-active-users (OnactiveClick)="activeVal($event)" [activeNames]="activeUsers"></app-active-users>
+      <app-inactive-users (OnInactiveClick)="inactiveVal($event)" [inActiveNames]="inactiveUsers"></app-inactive-users>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md- col-md-offset-2">
+      <app-active-users></app-active-users>
+      <app-inactive-users></app-inactive-users>
+    </div>
+  </div>
+</div> -->
+<!-- assignmnent 4 -->
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-tabs">
+        <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a
+            routerLink="">Home</a></li>
+        <li role="presentation" routerLinkActive="active"><a routerLink="serv">Servers</a></li>
+        <li role="presentation" routerLinkActive="active"><a [routerLink]="['users']">Users</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<app-even></app-even> -->
+
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-tabs">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" role="presentation"><a
+            routerLink="">Home</a></li>
+        <li routerLinkActive="active" role="presentation"><a routerLink="odd">Servers</a></li>
+        <li routerLinkActive="active" role="presentation"><a routerLink="footer">footer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
+      <app-even (myData)="sendToOdd($event)"></app-even>
+      <app-odd [toOdd]="send"></app-odd>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<!-- training on routin  -->
+
+
+
+<!-- <div class="container">
+  <div class="row navbar navbar-default">
+    <ul class="nav navbar-nav">
+      <li [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">
+        <a routerLink="" class="active">even</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/odd">odd</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/footer">footer</a>
+      </li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
+</div> -->
+
+
+
+
+<!-- the weather app -->
+
+<!-- <div class="cont">
+  <div class="upper-data">
+    <img src="../assets/FB_IMG_1672749789922.jpg" alt="hot" *ngIf="14 > 15">
+    <img src="../assets/FB_IMG_1672749791742.jpg" alt="cold" *ngIf="14 <= 15">
+
+
+    <div class="weather-data">
+      <div class="location">wellington</div>
+      <div class="temperature">{{14.40 | number: '1.0-0'}}C</div>
+    </div>
+
+  </div>
+  <div class="lower-data">
+    <div class="more-info-label">
+      More information
+    </div>
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/FB_IMG_1672749793290.jpg" alt="">
+          <span>min</span>
+        </div>
+        <div class="info-block-value">
+          10C
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/FB_IMG_1672749794998.jpg" alt="">
+          <span>max</span>
+        </div>
+        <div class="info-block-value">
+          20C
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/FB_IMG_1672749794998.jpg" alt="">
+          <span>humidity</span>
+        </div>
+        <div class="info-block-value">
+          77%
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/FB_IMG_1672749793290.jpg" alt="">
+          <span>wind</span>
+        </div>
+        <div class="info-block-value">
+          11 km/h
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- the weather app -->
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <a routerLink="/">Home</a>
+      <a routerLink="/user">user</a>
+      <!-- <a [routerLink]="['user', 1]">user 1</a> -->
+<!-- <a [routerLink]="['user', 2]">user 2</a> -->
+<!-- </div>
+    <hr>
+    <p *ngIf="userActivated">activated!</p>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div> --> -->
+
+
+<!-- learning forms -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onsubmit(f)" #f="ngForm">
+      <form (ngSubmit)="onsubmit()" #f="ngForm">
+        <div id="user-data" ngModelGroup="userGroup" #userData="ngModelGroup">
+          <div class="form-group">
+            <label for="username">username</label>
+            <input type="text" class="form-control" id="username" ngModel name="username" required>
+          </div>
+          <button class="btn btn-default" type="button" (click)="suggestUserName()">suggest an username</button>
+          <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" class="form-control" id="email" [ngModel]="'test.test@yahoo.com'" name="email" required
+              email #email="ngModel">
+            <span class="help-block" *ngIf="!email.valid && email.touched">please enter a valid email!</span>
+          </div>
+        </div>
+        <p class="help-block" *ngIf="!userData.valid && userData.touched">please enter a valid inputs!</p>
+        <div class="form-group">
+          <label for="secret">secret questions</label>
+          <select id="secret" class="form-control" [ngModel]="defaultQuestion" name="secret">
+            <option value="pet">your first pet</option>
+            <option value="teacher">your first teacher</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" name="questionAnswer" rows="3" [(ngModel)]="answer"></textarea>
+          <p>your reply {{ answer }}</p>
+          <div class="radio" *ngFor="let gender of genders">
+            <label>
+              <input type="radio" name="gender" [ngModel]=" 'female' " [value]="gender" required>
+              {{ gender }}
+            </label>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="!f.valid">submit</button>
+      </form>
+    </div>
+  </div>
+  <hr>
+  <div class="row" *ngIf="submitted">
+    <div class="col-xs-12">
+      <h3>your data </h3>
+      <p>username: {{ user.username }}</p>
+      <p>mail:{{ user.email }} </p>
+      <p>sercet question: {{ user.secretQuestion }}</p>
+      <p>answer: {{ user.answer }}</p>
+      <p>gender: {{ user.gender }}</p>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form [formGroup]="signupForm" (ngSubmit)="onSumbit()">
+        <div formGroupName="userData">
+          <div class="form-group">
+            <label for="username">username</label>
+            <input type="text" class="form-control" id="username" formControlName="username">
+            <span *ngIf="!signupForm.get('userData.username')?.valid && signupForm.get('userData.username')?.touched"
+              class="help-block">
+              <span *ngIf="signupForm.get('userData.username')?.getError('nameIsForbidden')">this name is invalid</span>
+              <span *ngIf="signupForm.get('userData.username')?.getError('required')">this field is required</span>
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="email">email</label>
+            <input type="text" class="form-control" id="email" formControlName="email">
+            <span *ngIf="!signupForm.get('userData.email')?.valid && signupForm.get('userData.email')?.touched"
+              class="help-block">please
+              enter a valid email</span>
+          </div>
+        </div>
+
+        <div class="radio" *ngFor="let gender of genders">
+          <label>
+            <input type="radio" [value]="gender" formControlName="gender">
+            {{ gender }}
+          </label>
+        </div>
+        <div formArrayName="hobbies">
+          <h4>your hobbies</h4> -->
+<!-- <button class="btn btn-default" type="button" (click)="onAddHobby()">add hobby</button> -->
+<!-- <button class="btn btn-default" type="button" (click)="controls">add hobby</button> -->
+<!-- <div class="form-group" *ngFor="let hobbyControl of getControls(); let i = index"> -->
+<!-- <div class="form-group" *ngFor="let hobbyControl of controls; let i = index"> -->
+<!-- <input type="text" class="form-control" [formControlName]="i">
+          </div>
+        </div>
+        <span *ngIf="!signupForm.valid && signupForm.touched" class="help-block">please
+          enter a valid data</span>
+        <button class="btn btn-primary" type="submit">submit</button>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+<!-- assignment form -->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form [formGroup]="projectForm" (ngSubmit)="onSaveProject()">
+        <div class="form-group">
+          <label for="name">project name</label>
+          <input type="text" id="name" class="form-control" formControlName="projectName">
+        </div>
+        <div class="form-group">
+          <label for="email">Mail</label>
+          <input type="email" id="email" class="form-control" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label for="status">ProjectStatus</label>
+          <select id="status" class="form-control" formControlName="projectStatus">
+            <option value="stable">stable</option>
+            <option value="critical">critical</option>
+            <option value="finished">finished</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit">create project</button>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- pipes  -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <input type="text" [(ngModel)]="filteredStatus">
+      <select class="form-control" [(ngModel)]="theSelected">
+        <option value="ALL">ALL</option>
+        <option value="stable">stable</option>
+        <option value="offline">offline</option>
+      </select>
+      <div> the Selected is: {{ theSelected }}</div>
+      <br>
+      <button class=" btn btn-primary" (click)="onAddServer()">Add Server</button>
+      <br><br>
+      <h2>app status {{ appStatus | async }}</h2>
+      <h2>random word {{ x }}</h2>
+      <hr>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let server of servers | trying:theSelected:'status' "
+          [ngClass]="getStatusClasses(server)">
+          <li class="list-group-item" *ngFor="let server of servers | filter:filteredStatus:'status' "
+          [ngClass]="getStatusClasses(server)">
+          <span class="badge">{{ server.status }}</span>
+          <strong>{{ server.name | shorten: 5 | uppercase }}
+            | {{ server.instanceType | uppercase }}
+            | {{ server.started
+            | date:
+            'fullDate' |
+            uppercase
+            }}</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <app-learn-comp></app-learn-comp> {{ $any(itemm).name }} -->
+
+
+
+<!-- post request -->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onSubmitted()" #f="ngForm">
+        <div class="form-group">
+          <label for="Title">Title</label>
+          <input type="text" id="title" name="title" class="form-control" [ngModel]="'enter a valid email'" #title>
+        </div>
+        <div class="form-group">
+          <label for="content">content</label>
+          <input type="text" name="content" id="content" class="form-control" [ngModel]="'enter a valid content'"
+            #content>
+        </div>
+        <button class="btn btn-primary" type="submit" (click)="onCreatePost({title, content})">send post</button>
+        <hr>
+        <div>
+          <button class="btn btn-primary" type="button">fetch post</button>
+          |
+          <button class="btn btn-danger" type="button">create clear</button>
+        </div>
+        <div>no posts available</div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- <input [ngModel]="writing" (ngModelChange)="writing = $event" /> -->
+
+<!-- <input [(ngModel)]="writing" /> -->
+
+<!-- <p [style.color]="writing ? 'blue' : 'green'">Hello my friends</p>
+<p *ngIf="writing">hello word 1</p>
+<p [hidden]="writing">hello word 2</p>
+<button (click)="!isActive" *ngIf="isActive">hi my friends</button>
+
+<ul>
+  <li *ngFor="let student of students; let i = index; trackBy: track"> student name is {{ student.name }} and his id is
+    {{ student.id }}
+    and total id is {{students.length}} </li>
+</ul>
+<button (click)=" AddAnotherStudent()">add another student</button>
+<div *ngFor="let color of colors; let i = index">
+  <label for="color-{{ i }}">{{ color }}</label>
+  <input type="radio" id="color-{{ i }}" [value]="color" name="red" [(ngModel)]="selectedColor">
+</div>
+<div [ngSwitch]="selectedColor">
+  <p *ngSwitchCase="'red'"> you have chosen the red color</p>
+  <p *ngSwitchCase="'blue'"> you have chosen the blue color</p>
+  <p *ngSwitchCase="'green'"> you have chosen the green color</p>
+  <p *ngSwitchDefault> you have not chosen anything yet</p>
+</div>
+<input type="text" #phone>
+<button (click)="call(phone.value)">print phone number</button> -->
+
+
+
+
+<!-- <svg>
+  <g>
+    <rect x="0" y="0" width="100%" height="100" [attr.fill]="fillColor" (click)="changeColor()"></rect>
+    <text x="120" y="50">click to change the color</text>
+  </g>
+</svg>
+
+<div>
+  <input type="text" #ref (keyup.esc)="hello($event);print()">
+  <span>{{ ref.value }}</span>
+  <input type="text" #secInp>
+</div>
+<br>
+<hr>
+<input type="text" #theNum>
+<ul>
+  <li *ngFor="let num of nus">{{ num }}</li>
+</ul>
+<button (click)="onAddNumber(theNum.value)">add item</button>
+<div ngNonBindable>{{ test }}</div>
+<div appBetterHighlight>appBetterHighlight </div>
+
+<div *ngFor="let num of haha; let i = index; let o = odd; let e = even; let f = first; let l = last; let c = count">
+  <span>{{ l }} last</span>
+</div>
+<input type="text" [(ngModel)]="dname">
+<div *ngIf="dname;then thenn;else elsee">hello</div>
+<ng-template #thenn>then</ng-template>
+<ng-template #elsee>else</ng-template>
+<div *ngFor="let item of [1,2,3,4,5] | slice:-2">{{ item }}</div>
+<p>{{ object | json}}</p>
+<p style="direction: rtl;">{{ time | date: 'long':'+2':'ar-Eg'}}</p>
+<p>{{ time | date:'y-MMMM/d-EEEE-a-h-s-z'}}</p>
+
+<div>total age is | {{ datas | sumPipe:'age' }}</div>
+<div>total age is | {{ datas | sumPipe:'speed' }}</div> -->
+<!-- <hr>
+favourite Color: <input type="text" [formControl]="favouriteColorControl">
+<hr>
+<hr>
+favourite Color: <input type="text" [(ngModel)]="favouriteColor">
+{{favouriteColorControl | json}}
+{{favouriteColorControl}} -->
+
+<!-- <label>
+  Name:
+  <input type="text" [formControl]="namee">
+</label>
+{{namee.value}}
+ -->
+<!--
+<button (click)="updateName()">update value</button>
+<hr>
+<form [formGroup]="profileForm" (ngSubmit)="onsubm()">
+  <label>first name
+    <input type="text" formControlName="firstName">
+    <span *ngIf="profileForm.get('firstName')?.invalid && profileForm.get('firstName')?.touched">first name is
+      required</span>
+    <span *ngIf="profileForm.get('firstName')?.pristine">please enter your first name</span>
+  </label>
+  <br>
+  <label>last name
+    <input type=" text" formControlName="lastName">
+  </label>
+  <br>
+  <label>email
+    <input type=" text" formControlName="email">
+    <span *ngIf="email?.invalid && email?.touched && email?.dirty">
+      <span *ngIf="email?.getError('pattern')">wrong email pattern</span>
+      <span *ngIf="profileForm.get('email')?.getError('email')">wrong email </span>
+    </span>
+  </label>
+  <br>
+  <div formGroupName="address">
+
+    <label>city
+      <input type="text" formControlName="city">
+    </label>
+    <br>
+    <label>street
+      <input type="text" formControlName="street">
+    </label>
+  </div>
+  <br>
+  <button>submit</button>
+  <br>
+  <button (click)="updateForm()">update value</button>
+  form status is {{profileForm.status}}
+</form>
+
+<div class="form-contaier">
+  <form [formGroup]="schoolform">
+    <h4>dynamic form</h4>
+    <div class="form-body">
+      <div class="form-control">
+        school Name *
+        <input type="text" placeholder="username" formControlName="schoolName">
+      </div>
+      <div class="form-control">
+        total Students Count *
+        <input type="text" placeholder="total StudentsCount" formControlName="totalStudentsCount">
+      </div> -->
+
+<!-- start class container -->
+<!-- <div class="class-rooms" formArrayName="classRooms" *ngIf="getClassRooms().controls.length">
+        <ng-container *ngFor="let classRoom of getClassRooms().controls;let classRoomIndex = index"> -->
+
+<!-- start class room -->
+<!-- <div class="class-rooms__room" [formGroupName]="classRoomIndex">
+            <div class="form-control">
+              total Students Count *
+              <input type="text" placeholder="Students Count" formControlName="StudentsCount">
+            </div>
+            <div class="form-control">
+              class room number *
+              <input type="text" placeholder="class room number" formControlName="classRoomNumber">
+            </div>
+            start subject -->
+<!-- <div class="class-rooms-rrom--subjects" formArrayName="subjects">
+              <ng-container>
+                <div class="subject"
+                  *ngFor="let subject of getClassRoomSubjects(classRoomIndex).controls;let subjectindex = index"> -->
+<!-- start subject -->
+<!-- <div class="form-control" [formGroupName]="subjectindex">
+                    subject Name *
+                    <input type="text" placeholder="subjectName" formControlName="subjectName">
+                  </div>
+                  <div class="form-control">
+                    Students Count *
+                    <input type="text" placeholder="Students Count" formControlName="StudentsCount">
+                  </div>
+                  <button class="btn btn-danger" type="button"
+                    (click)="deleteClassRoomSubjects(classRoomIndex,subjectindex)">Delete
+                    subject</button>
+                </div> -->
+<!-- end subject -->
+
+<!-- </ng-container>
+            </div> -->
+
+<!-- end subject -->
+<!-- <button class="btn btn-primary" type=" button" (click)="addClassRoomSubjects(classRoomIndex)">Add
+              Subject</button>
+            <button class="btn btn-danger" type="button" (click)="deleteClassRooms(classRoomIndex)">Delete class
+              room</button>
+          </div> -->
+
+<!-- end class room -->
+<!-- </ng-container> -->
+
+<!-- </div> -->
+<!-- end class container -->
+<!-- <button class="btn btn-primary" type="button" (click)="addClassRooms()">Add Class Room</button> -->
+<!-- <hr> -->
+<!-- {{ schoolform.value | json }} -->
+<!-- </div>
+  </form>
+</div> -->

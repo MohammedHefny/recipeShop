@@ -1,0 +1,20 @@
+<h2>Start of assignment 2</h2>
+
+<!-- revision on the previous  -->
+
+<!-- <p>{{'server'}} with id {{ id }} is {{ status }}</p> -->
+<!-- <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button> -->
+<!-- <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> -->
+<!-- <p>{{serverMessage}}</p> -->
+<!-- <label>enter your server name</label> -->
+<!-- <input type="text" (input)="onUpdateServerName($event)"> -->
+<!-- <input type="text" [(ngModel)]="serverName"> -->
+<!-- <p>{{serverName}}</p> -->
+<!-- <p>{{allowNewServer}}</p>
+<p [innerText]="!allowNewServer"></p> -->
+
+<!-- start assignment 2 -->
+<label>enter your username</label>
+<input class="form-control" type="text" [(ngModel)]="userName">
+<p>{{ userName }}</p>
+<button class="btn btn-primary" [disabled]="userName === '' " (click)="userName = ''">Reset User</button>

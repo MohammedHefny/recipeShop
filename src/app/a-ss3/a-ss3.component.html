@@ -1,0 +1,21 @@
+<h1>assignment three start here</h1>
+<button (click)="show= !show" class="btn btn-primary">Display Details</button> -->
+<button (click)="onToggleDetails()" class="btn btn-primary">Display Details</button>
+<p *ngIf="show">Secret Password = tuna</p>
+<!-- <div [ngClass]="{'white-text': anyname >= 5}" [ngStyle]="{backgroundColor: anyname >= 5 ? 'blue' : 'transparent' }"
+  *ngFor="let anyname of log">{{anyname}}</div> -->
+<div [ngClass]="{'white-text': i >= 4}" [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent' }"
+  *ngFor="let anyname of log; let i = index ">{{anyname}}</div>
+
+
+
+
+
+
+
+
+<!-- <button (click)="onButtonClick ()" class="btn btn btn-primary">Display Details</button> -->
+<!-- <p *ngIf="show">show Password = tuna</p>
+<div [ngClass]="{'white-text': status === 'online'}" [ngStyle]="{backgroundColor:getColor()}" *ngIf="show">the id is
+  {{id}} and he is {{status}}</div> -->
+<!-- <app-a-ss3 *ngFor="let anyname of box"></app-a-ss3> -->

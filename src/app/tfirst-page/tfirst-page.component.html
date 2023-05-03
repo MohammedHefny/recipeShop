@@ -1,0 +1,55 @@
+<div class="row" *ngFor="let recipe of recipes">
+  <div class="col-md-5">
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-success">New Recipe</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12">
+        {{recipe.name}}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-7">
+    <div class="row">
+      <div class="xol-xs-12">
+        <img style="max-height: 300px;" [src]="recipe.imgPath" alt="{{ recipe.desc}}" class="img-responsive">
+      </div>
+    </div>
+    <div class="row">
+      <div class="xol-xs-12">
+        <h1>{{ recipe.name }}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="xol-xs-12">
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle">
+            Manage Recipe
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">To Shopping List</a></li>
+            <li><a href="#">Edit Recipe</a></li>
+            <li><a href="#">Delete Recipe</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        {{ recipe.desc }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        Ingredients
+      </div>
+    </div>
+    <ng-template #infoText>
+      <p>please select a recipe!</p>
+    </ng-template>
+  </div>
+</div>

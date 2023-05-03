@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-xs-10">
+    <div class="row">
+      <div class="col-xs-12">
+        <form>
+          <div class="row">
+            <div class="col-sm-5 form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-control" #nameInput>
+            </div>
+            <div class="col-sm-2 form-group">
+              <label for="amount">Amount</label>
+              <input type="number" class="form-control" id="amount" #amountInput>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <button (click)="AddFruit()" class="btn btn-success" type="submit">Add</button>
+              <button class="btn btn-danger" type="button">Delete</button>
+              <button class="btn btn-primary" type=" button">Clear</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr>
+    <ul class="list-group" *ngFor="let fruit of SeconedIng">
+      <a (AddFruitHasBeenClicked)="data($event)" href="#" class="list-group-item"
+        style="cursor: pointer;">{{fruit.name}} ({{fruit.amount}})</a>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<!-- <div class="row">
+  <div class="col-xs-12">
+    <p>Add new servers or blueprints!</p>
+    <label>server name</label>
+    <input type="text" class="form-control" [(ngModel)]="newServerName">
+    <label>server content</label>
+    <input type="text" class="form-control" [(ngModel)]="newServerContent">
+    <br>
+    <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+    <button class="btn btn-primary" (click)="onAddBluePrint()">Add server BluePrint</button>
+  </div>
+</div> -->
+
+
+<div class="row">
+  <p>Add new servers or blueprints!</p>
+  <label>server name</label>
+  <!-- <input [(ngModel)]="inputName" type="text" class="form-control"> -->
+  <input type="text" class="form-control" #HashtagServer>
+  <label>server content</label>
+  <input type="text" class="form-control" #serverContentInput>
+  <br>
+  <button (click)="putInServer (HashtagServer)" class="btn btn-primary">Add Server</button>
+  <button (click)="putInBluePrint (HashtagServer)" class="btn btn-primary">Add server BluePrint</button>
+</div>
